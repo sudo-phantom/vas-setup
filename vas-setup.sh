@@ -32,6 +32,7 @@ make;
 make install;
 sleep 5;
 useradd -m openvas;
+useradd -m redis
 greenbone-nvt-sync;
 cp redis-openvas.conf /etc/redis/;
 chown redis:redis /etc/redis/redis-openvas.conf;
