@@ -15,9 +15,9 @@ clear;
 
 mkdir tools;
 cd tools;
-echo "packages installed, brining down the vas"
+echo "packages installed, brining down the vas";
 git clone https://github.com/greenbone/gvm-libs.git;
-cd gvm-libs
+cd gvm-lib;
 cmake .;
 make;
 make install;
