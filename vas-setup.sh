@@ -12,7 +12,7 @@ sleep .5;
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list;
 apt install yarn ;
 clear;
-
+################################
 cd /tmp;
 echo "packages installed, brining down the vas";
 git clone https://github.com/greenbone/gvm-libs.git;
@@ -31,12 +31,9 @@ cmake .;
 make;
 make install;
 sleep 5;
-echo "openvas scanner installed";
-clear;
-
-
 greenbone-nvt-sync;
 cp redis-openvas.conf /etc/redis/;
 chown redis:redis /etc/redis/redis-openvas.conf;
 echo "db_address = /run/redis-openvas/redis.sock" > /etc/openvas/openvas.conf;
 systemctl start redis-server@openvas.service;
+echo "i think we're done here"
