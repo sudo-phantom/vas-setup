@@ -1,6 +1,5 @@
 apt update;
 cwd=$(pwd);
-echo "$cwd will be your build directory";
 apt install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev  libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev libgcrypt20-dev redis-server git python-pip cmake -y;
 sleep 5;
 echo "pausing for apt";
