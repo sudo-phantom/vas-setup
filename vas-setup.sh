@@ -1,6 +1,6 @@
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -;
-sleep .5;
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list;
+#curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -;
+#sleep .5;
+#echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list;
 apt update;
 cwd=$(pwd);
 apt install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev  libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev libgcrypt20-dev redis-server git python-pip cmake -y;
