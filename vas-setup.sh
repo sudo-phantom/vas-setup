@@ -12,6 +12,8 @@ sleep .5;
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list;
 apt install yarn ;
 cwd=$(pwd);
+echo $cwd;
+sleep 5;
 cd $cwd/tools;
 sleep .5;
 clear;
