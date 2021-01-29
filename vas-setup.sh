@@ -14,6 +14,7 @@ apt install yarn ;
 cwd=$(pwd);
 echo $cwd;
 sleep 5;
+mkdir $cwd/tools;
 cd $cwd/tools;
 sleep .5;
 clear;
