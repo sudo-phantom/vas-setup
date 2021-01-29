@@ -31,7 +31,7 @@ cmake .;
 make;
 make install;
 sleep 5;
-useradd panda;
+useradd -m panda;
 runuser -l panda -c 'whoami';
 runuser -l panda -c ' /usr/local/bin/greenbone-nvt-sync';
 cp redis-openvas.conf /etc/redis/;
