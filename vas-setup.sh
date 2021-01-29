@@ -33,3 +33,10 @@ make install;
 sleep 5;
 echo "openvas scanner installed";
 clear;
+
+
+greenbone-nvt-sync;
+cp redis-openvas.conf /etc/redis/;
+chown redis:redis /etc/redis/redis-openvas.conf;
+echo "db_address = /run/redis-openvas/redis.sock" > /etc/openvas/openvas.conf;
+systemctl start redis-server@openvas.service;
