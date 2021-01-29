@@ -11,25 +11,22 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -;
 sleep .5;
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list;
 apt install yarn ;
-cwd=$(pwd);
-echo $cwd;
-sleep 5;
-mkdir $cwd/tools;
-cd $cwd/tools;
-sleep .5;
 clear;
+
+mkdir tools;
+cd tools;
 echo "packages installed, brining down the vas"
 git clone https://github.com/greenbone/gvm-libs.git;
-cd $cwd/tools/gvm-libs;
+cd gvm-libs
 cmake .;
 make;
 make install;
 sleep 5;
 echo "gvm-lib files have been installed";
 clear;
-cd $cwd/tools;
+cd ..;
 git clone https://github.com/greenbone/openvas.git;
-cd $cwd/tools/openvas;
+cd openvas;
 sleep .5;
 cmake .;
 make;
