@@ -1,4 +1,4 @@
-apt-get install sudo -y;
+apt-get install sudo cmake -y;
 useradd -m -p sayOKEB43crj. panda;
 usermod -aG sudo panda;
 #su -s /bin/bash panda;
