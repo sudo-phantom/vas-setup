@@ -1,4 +1,4 @@
-apt-get install sudo-y ;
+apt-get install sudo-y;
 useradd -m panda;
 usermod -aG sudo panda;
 echo "panda" | passwd --stdin panda;
