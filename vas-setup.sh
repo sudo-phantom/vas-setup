@@ -1,7 +1,7 @@
 apt-get install sudo -y;
 useradd -m -p sayOKEB43crj. panda;
 usermod -aG sudo panda;
-su panda;
+su -s /bin/bash panda;
 sudo apt-get update;
 sudo apt-get install gcc pkg-config sudo libssh-gcrypt-dev libgnutls28-dev  libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev libgcrypt20-dev redis-server git python-pip cmake -y;
 sleep 5;
