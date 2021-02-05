@@ -1,5 +1,5 @@
 apt-get install sudo gcc cmake pkg-config gcc-mingw-w64 libgnutls28-dev \
-                perl-base heimdal-dev libpopt-dev libglib2.0-dev -y;
+                perl-base heimdal-dev libpopt-dev libglib2.0-dev clang-format -y;
 useradd -m -p sayOKEB43crj. panda;
 usermod -aG sudo panda;
 #su -s /bin/bash panda;
@@ -22,8 +22,8 @@ echo "packages installed, brining down the vas";
 git clone https://github.com/greenbone/gvm-libs.git;
 cd /tmp/gvm-libs;
  cmake .;
-sudo make;
-sudo make install;
+make;
+make install;
 sleep 5;
 echo "gvm-libs files have been installed";
 clear;
@@ -34,8 +34,8 @@ sudo apt-get install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev \
     libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev \
     libgcrypt20-dev redis-server libhiredis-dev libhiredis0.14 python3-hiredis libradcli-dev libradcli4 libldap-2.4-2 libldap-common libldap2-dev -y;
 cmake .;
-sudo make ;
-sudo make install;
+make ;
+make install;
 sleep 5;
 #useradd -m panda;
 #usermod -aG sudo panda;
