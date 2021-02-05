@@ -20,9 +20,9 @@ cd /tmp;
 echo "packages installed, brining down the vas";
 git clone https://github.com/greenbone/gvm-libs.git;
 cd /tmp/gvm-libs;
-cmake .;
-make;
-make install;
+ cmake .;
+sudo make;
+sudo make install;
 sleep 5;
 echo "gvm-libs files have been installed";
 clear;
@@ -31,8 +31,8 @@ git clone https://github.com/greenbone/openvas.git;
 cd /tmp/openvas;
 sudo apt-get install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev \
     libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev \
-    libgcrypt20-dev redis-server -y;
-cmake ..;
+    libgcrypt20-dev redis-server libhiredis-dev libhiredis0.14 python3-hiredis -y;
+cmake .;
 sudo make ;
 sudo make install;
 sleep 5;
