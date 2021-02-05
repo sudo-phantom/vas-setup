@@ -37,7 +37,7 @@ sleep 5;
 #useradd -m panda;
 #usermod -aG sudo panda;
 #echo "panda" | passwd --stdin panda;
-chown panda /usr/local/bin/greenbone-nvt-sync;
+chown panda:panda /usr/local/bin/greenbone-nvt-sync;
 runuser -l panda -c 'whoami';
 runuser -l panda -c ' /usr/local/bin/greenbone-nvt-sync';
 cp redis-openvas.conf /etc/redis/;
