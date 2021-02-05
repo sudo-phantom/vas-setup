@@ -29,9 +29,11 @@ clear;
 cd /tmp;
 git clone https://github.com/greenbone/openvas.git;
 cd /tmp/openvas;
-sleep .5;
-cmake .;
-sudo make;
+apt-get install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev \
+    libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev \
+    libgcrypt20-dev redis-server;
+cmake ..;
+sudo make ;
 sudo make install;
 sleep 5;
 #useradd -m panda;
