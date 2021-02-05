@@ -29,9 +29,9 @@ clear;
 cd /tmp;
 git clone https://github.com/greenbone/openvas.git;
 cd /tmp/openvas;
-apt-get install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev \
+sudo apt-get install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev \
     libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev \
-    libgcrypt20-dev redis-server;
+    libgcrypt20-dev redis-server -y;
 cmake ..;
 sudo make ;
 sudo make install;
