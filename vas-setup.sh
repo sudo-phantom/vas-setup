@@ -39,6 +39,7 @@ sleep 5;
 #echo "panda" | passwd --stdin panda;
 chown panda:panda /usr/local/bin/greenbone-nvt-sync;
 runuser -l panda -c 'whoami';
+rm /opt/gvm/var/run/feed-update.lock;
 runuser -l panda -c ' /usr/local/bin/greenbone-nvt-sync';
 cp redis-openvas.conf /etc/redis/;
 chown redis:redis /etc/redis/redis-openvas.conf;
