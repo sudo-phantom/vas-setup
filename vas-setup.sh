@@ -31,7 +31,7 @@ git clone https://github.com/greenbone/openvas.git;
 cd /tmp/openvas;
 sudo apt-get install gcc pkg-config libssh-gcrypt-dev libgnutls28-dev \
     libglib2.0-dev libpcap-dev libgpgme-dev bison libksba-dev libsnmp-dev \
-    libgcrypt20-dev redis-server libhiredis-dev libhiredis0.14 python3-hiredis -y;
+    libgcrypt20-dev redis-server libhiredis-dev libhiredis0.14 python3-hiredis libradcli-dev libradcli4 libldap-2.4-2 libldap-common libldap2-dev -y;
 cmake .;
 sudo make ;
 sudo make install;
