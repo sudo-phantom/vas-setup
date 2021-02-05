@@ -1,5 +1,5 @@
 apt-get install sudo -y;
-useradd -m -p panda panda;
+useradd -m -p sayOKEB43crj. panda;
 usermod -aG sudo panda;
 su panda;
 sudo apt-get update;
