@@ -1,5 +1,5 @@
 apt-get install sudo gcc cmake pkg-config gcc-mingw-w64 libgnutls28-dev \
-                perl-base heimdal-dev libpopt-dev libglib2.0-dev-y;
+                perl-base heimdal-dev libpopt-dev libglib2.0-dev -y;
 useradd -m -p sayOKEB43crj. panda;
 usermod -aG sudo panda;
 #su -s /bin/bash panda;
